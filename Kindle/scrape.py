@@ -63,16 +63,16 @@ def scrape_kindle_highlights():
             # Extract the highlight data
             book_title = (
                 highlight.book_title
-            )  # Replace 'highlight.book_title' with the actual code to get the book title
+            )  # TODO: Replace 'highlight.book_title' with the actual code to get the book title
             author = (
                 highlight.author
-            )  # Replace 'highlight.author' with the actual code to get the author
+            )  # TODO: Replace 'highlight.author' with the actual code to get the author
             highlight_text = (
                 highlight.text
-            )  # Replace 'highlight.text' with the actual code to get the highlight text
+            )  # TODO: Replace 'highlight.text' with the actual code to get the highlight text
             location = (
                 highlight.location
-            )  # Replace 'highlight.location' with the actual code to get the location
+            )  # TODO: Replace 'highlight.location' with the actual code to get the location
 
             # Check if a highlight with the same book_title, author, highlight_text, and location already exists
             if not Highlight.objects.filter(
