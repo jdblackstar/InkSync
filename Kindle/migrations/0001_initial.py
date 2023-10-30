@@ -4,29 +4,43 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Tag',
+            name="Tag",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('color', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("color", models.CharField(max_length=50)),
             ],
         ),
         migrations.CreateModel(
-            name='Highlight',
+            name="Highlight",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('book_title', models.CharField(max_length=200)),
-                ('author', models.CharField(max_length=200)),
-                ('highlight_text', models.TextField()),
-                ('location', models.IntegerField()),
-                ('tags', models.ManyToManyField(to='Kindle.tag')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("book_title", models.CharField(max_length=200)),
+                ("author", models.CharField(max_length=200)),
+                ("highlight_text", models.TextField()),
+                ("location", models.IntegerField()),
+                ("tags", models.ManyToManyField(to="Kindle.tag")),
             ],
         ),
     ]
